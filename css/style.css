@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #1e293b;
+}
+
+header,
+main,
+footer {
+  padding: 24px;
+}
+
+header,
+footer {
+  background-color: #eff4f8;
+}
