@@ -86,6 +86,7 @@ a {
 
 .button:hover:not(:disabled) {
   background-color: var(--color-primary-dark);
+  color: var(--color-white);
 }
 
 a:hover {
@@ -369,6 +370,7 @@ footer .footer-note {
 
 .button-secondary:hover:not(:disabled) {
   background-color: var(--color-border);
+  color: var(--color-text);
 }
 
 .success-message {
