@@ -1,0 +1,58 @@
+*   60c3473 Merge pull request #6 from str1nt/feature/flex-grid-navigation
+|\  
+| * 799ab43 style: implement flex navigation and named grid catalog layout
+| * 1545abb feat: add product grid containers and catalog filter sidebar
+|/  
+*   1427822 Merge pull request #5 from str1nt/feature/multi-page-navigation
+|\  
+| * ef696bd style: add breadcrumbs anchor states and page documentation
+| * 7ef2bc0 feat: add catalog contacts and shared multi-page navigation
+|/  
+* ad6df82 fix: preserve invalid field borders while focused
+*   bd4f0f4 Merge pull request #4 from str1nt/feature/css-architecture-states
+|\  
+| * a4c2cbf fix: keep button text readable in hover states
+| * 342d6be style: add accessible focus hover and disabled states
+| * de70248 refactor: organize stylesheet sections and shared CSS variables
+|/  
+*   8e27b05 Merge pull request #3 from str1nt/feature/form-modal-validation
+|\  
+| * 6b42ba8 feat: handle dialog actions and client-side form validation
+| * 9f34ef3 feat: add order dialog fields and validation attributes
+|/  
+* 4de1fc9 fix: refresh stylesheet after GitHub Pages deployment
+*   d5a2340 Merge pull request #2 from str1nt/feature/html-css-start-page
+|\  
+| * 2592df7 style: add base store styles and document coursework scope
+| * afe22b5 feat: add semantic store layout and product illustrations
+|/  
+* 9c75299 docs: add verified GitHub Pages link
+*   93a67a4 Merge pull request #1 from str1nt/feature/start-page
+|\  
+| * 135f9e3 feat: add project description section
+|/  
+* f5b8300 feat: initialize TechStore start page and documentation
+* 841f260 chore: configure ignored local files
+60c3473 2026-10-16T17:46:31+02:00 Merge pull request #6 from str1nt/feature/flex-grid-navigation
+799ab43 2026-10-16T17:45:00+02:00 style: implement flex navigation and named grid catalog layout
+1545abb 2026-10-16T17:43:50+02:00 feat: add product grid containers and catalog filter sidebar
+1427822 2026-10-16T17:39:00+02:00 Merge pull request #5 from str1nt/feature/multi-page-navigation
+ef696bd 2026-10-16T17:37:51+02:00 style: add breadcrumbs anchor states and page documentation
+7ef2bc0 2026-10-16T17:37:05+02:00 feat: add catalog contacts and shared multi-page navigation
+ad6df82 2026-10-16T17:31:59+02:00 fix: preserve invalid field borders while focused
+bd4f0f4 2026-10-16T17:30:27+02:00 Merge pull request #4 from str1nt/feature/css-architecture-states
+a4c2cbf 2026-10-16T17:29:19+02:00 fix: keep button text readable in hover states
+342d6be 2026-10-16T17:28:37+02:00 style: add accessible focus hover and disabled states
+de70248 2026-10-16T17:27:57+02:00 refactor: organize stylesheet sections and shared CSS variables
+8e27b05 2026-10-16T17:23:48+02:00 Merge pull request #3 from str1nt/feature/form-modal-validation
+6b42ba8 2026-10-16T17:22:32+02:00 feat: handle dialog actions and client-side form validation
+9f34ef3 2026-10-16T17:21:49+02:00 feat: add order dialog fields and validation attributes
+4de1fc9 2026-10-16T17:19:21+02:00 fix: refresh stylesheet after GitHub Pages deployment
+d5a2340 2026-10-16T17:17:24+02:00 Merge pull request #2 from str1nt/feature/html-css-start-page
+2592df7 2026-10-16T17:15:56+02:00 style: add base store styles and document coursework scope
+afe22b5 2026-10-16T17:14:57+02:00 feat: add semantic store layout and product illustrations
+9c75299 2026-10-16T17:13:17+02:00 docs: add verified GitHub Pages link
+93a67a4 2026-10-16T17:10:00+02:00 Merge pull request #1 from str1nt/feature/start-page
+135f9e3 2026-10-16T17:07:56+02:00 feat: add project description section
+f5b8300 2026-10-16T17:05:54+02:00 feat: initialize TechStore start page and documentation
+841f260 2026-10-16T18:05:35+03:00 chore: configure ignored local files
