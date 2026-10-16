@@ -84,8 +84,26 @@ a {
   cursor: pointer;
 }
 
-.button:hover {
+.button:hover:not(:disabled) {
   background-color: var(--color-primary-dark);
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
 }
 
 /* 4. Компоненты страницы */
@@ -196,6 +214,10 @@ a {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   background-color: var(--color-white);
+}
+
+.product-card:hover {
+  border-color: var(--color-primary);
 }
 
 .product-image {
@@ -318,15 +340,16 @@ footer .footer-note {
   margin-top: var(--space-xs);
 }
 
-.form-field input:focus-visible,
-.form-field select:focus-visible,
-.form-field textarea:focus-visible,
-.form-actions button:focus-visible {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 3px;
+.form-field input:hover,
+.form-field select:hover,
+.form-field textarea:hover,
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: var(--color-primary);
 }
 
-[aria-invalid="true"] {
+.form-field [aria-invalid="true"] {
   border-color: var(--color-danger);
   outline: 1px solid var(--color-danger);
 }
@@ -344,7 +367,7 @@ footer .footer-note {
   color: var(--color-text);
 }
 
-.button-secondary:hover {
+.button-secondary:hover:not(:disabled) {
   background-color: var(--color-border);
 }
 
