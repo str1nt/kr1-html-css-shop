@@ -5,14 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Учебная витрина TechStore: ноутбуки, смартфоны и наушники для учёбы и жизни.">
   <title>TechStore — техника для учёбы и жизни</title>
-  <link rel="stylesheet" href="css/style.css?v=5">
+  <link rel="stylesheet" href="css/style.css?v=6">
   <script src="js/main.js?v=3" defer></script>
 </head>
 <body>
   <header>
     <div class="site-header">
-      <a class="site-logo" href="index.html">Tech<span>Store</span><span class="logo-dot">.</span></a>
-      <p class="site-caption">Техника для повседневных задач</p>
+      <div class="header-brand">
+        <a class="site-logo" href="index.html">Tech<span>Store</span><span class="logo-dot">.</span></a>
+        <p class="site-caption">Техника для повседневных задач</p>
+      </div>
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
           <li><a href="index.html">Главная</a></li>
@@ -47,30 +49,32 @@
       <p class="eyebrow">ВЫБОР ДЛЯ КАЖДОГО ДНЯ</p>
       <h2>Популярные товары</h2>
       <p><a href="catalog.html">Весь каталог →</a></p>
-      <article class="product-card" id="note-15">
-        <img class="product-image" src="images/laptop.svg" width="360" height="240" alt="Серебристый ноутбук с фиолетовым экраном">
-        <p class="product-category">НОУТБУКИ</p>
-        <h3>Ноутбук Note 15</h3>
-        <p class="product-description">Экран 15,6″, 16 ГБ памяти, SSD 512 ГБ. Для занятий и учебных проектов.</p>
-        <p class="product-price">64 990 ₽</p>
-        <button class="button product-card__button" type="button" data-product="Ноутбук Note 15">Заказать</button>
-      </article>
-      <article class="product-card" id="core-128">
-        <img class="product-image" src="images/phone.svg" width="360" height="240" alt="Смартфон графитового цвета с большим экраном">
-        <p class="product-category">СМАРТФОНЫ</p>
-        <h3>Смартфон Core 128</h3>
-        <p class="product-description">Экран 6,4″, память 128 ГБ, аккумулятор 5000 мА·ч. Всё нужное под рукой.</p>
-        <p class="product-price">24 990 ₽</p>
-        <button class="button product-card__button" type="button" data-product="Смартфон Core 128">Заказать</button>
-      </article>
-      <article class="product-card" id="wave">
-        <img class="product-image" src="images/headphones.svg" width="360" height="240" alt="Беспроводные накладные наушники светлого цвета">
-        <p class="product-category">АУДИО</p>
-        <h3>Наушники Wave</h3>
-        <p class="product-description">Беспроводное подключение, мягкие амбушюры, до 30 часов музыки.</p>
-        <p class="product-price">7 990 ₽</p>
-        <button class="button product-card__button" type="button" data-product="Наушники Wave">Заказать</button>
-      </article>
+      <div class="products-grid">
+        <article class="product-card" id="note-15">
+          <img class="product-image" src="images/laptop.svg" width="360" height="240" alt="Серебристый ноутбук с фиолетовым экраном">
+          <p class="product-category">НОУТБУКИ</p>
+          <h3>Ноутбук Note 15</h3>
+          <p class="product-description">Экран 15,6″, 16 ГБ памяти, SSD 512 ГБ. Для занятий и учебных проектов.</p>
+          <p class="product-price">64 990 ₽</p>
+          <button class="button product-card__button" type="button" data-product="Ноутбук Note 15">Заказать</button>
+        </article>
+        <article class="product-card" id="core-128">
+          <img class="product-image" src="images/phone.svg" width="360" height="240" alt="Смартфон графитового цвета с большим экраном">
+          <p class="product-category">СМАРТФОНЫ</p>
+          <h3>Смартфон Core 128</h3>
+          <p class="product-description">Экран 6,4″, память 128 ГБ, аккумулятор 5000 мА·ч. Всё нужное под рукой.</p>
+          <p class="product-price">24 990 ₽</p>
+          <button class="button product-card__button" type="button" data-product="Смартфон Core 128">Заказать</button>
+        </article>
+        <article class="product-card" id="wave">
+          <img class="product-image" src="images/headphones.svg" width="360" height="240" alt="Беспроводные накладные наушники светлого цвета">
+          <p class="product-category">АУДИО</p>
+          <h3>Наушники Wave</h3>
+          <p class="product-description">Беспроводное подключение, мягкие амбушюры, до 30 часов музыки.</p>
+          <p class="product-price">7 990 ₽</p>
+          <button class="button product-card__button" type="button" data-product="Наушники Wave">Заказать</button>
+        </article>
+      </div>
     </section>
     <aside class="aside-info">
       <h2>О проекте</h2>
