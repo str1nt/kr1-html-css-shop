@@ -3,26 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TechStore — учебный магазин электроники</title>
+  <title>TechStore — техника для учёбы и жизни</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
-    <h1>TechStore</h1>
-    <p>Учебный магазин электроники</p>
+    <div class="site-header">
+      <a class="site-logo" href="index.html">Tech<span>Store</span><span class="logo-dot">.</span></a>
+      <p class="site-caption">Техника для повседневных задач</p>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="#popular">Популярные товары</a></li>
+          <li><a href="#advantages">Преимущества</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <main>
-    <section>
-      <h2>Техника для учёбы и повседневных задач</h2>
-      <p>Здесь появится каталог ноутбуков, смартфонов и наушников.</p>
+    <section class="hero">
+      <p class="eyebrow">КОЛЛЕКЦИЯ / 2026</p>
+      <h1>Техника, которая<br>вписывается в твою жизнь.</h1>
+      <p class="hero-description">Для первой пары, любимого плейлиста и проектов, которые хочется закончить. Выбери то, что подходит тебе.</p>
+      <a class="button" href="#popular">Смотреть товары →</a>
+      <p class="hero-note">Ноутбуки · Смартфоны · Наушники</p>
     </section>
-    <section>
+    <section class="section" id="advantages">
+      <p class="eyebrow">ПРОСТО ВЫБРАТЬ</p>
+      <h2>Главное о товарах — на виду</h2>
+      <ul class="advantages-list">
+        <li><strong>Понятные характеристики.</strong> Память, экран и назначение без длинных описаний.</li>
+        <li><strong>Разные задачи.</strong> Техника для учёбы, общения и отдыха в одном каталоге.</li>
+        <li><strong>Открытые условия.</strong> Это учебная витрина: реальные покупки здесь не совершаются.</li>
+      </ul>
+    </section>
+    <section class="section" id="popular">
+      <p class="eyebrow">ВЫБОР ДЛЯ КАЖДОГО ДНЯ</p>
+      <h2>Популярные товары</h2>
+      <article class="product-card" id="note-15">
+        <img class="product-image" src="images/laptop.svg" width="360" height="240" alt="Серебристый ноутбук с фиолетовым экраном">
+        <p class="product-category">НОУТБУКИ</p>
+        <h3>Ноутбук Note 15</h3>
+        <p class="product-description">Экран 15,6″, 16 ГБ памяти, SSD 512 ГБ. Для занятий и учебных проектов.</p>
+        <p class="product-price">64 990 ₽</p>
+      </article>
+      <article class="product-card" id="core-128">
+        <img class="product-image" src="images/phone.svg" width="360" height="240" alt="Смартфон графитового цвета с большим экраном">
+        <p class="product-category">СМАРТФОНЫ</p>
+        <h3>Смартфон Core 128</h3>
+        <p class="product-description">Экран 6,4″, память 128 ГБ, аккумулятор 5000 мА·ч. Всё нужное под рукой.</p>
+        <p class="product-price">24 990 ₽</p>
+      </article>
+      <article class="product-card" id="wave">
+        <img class="product-image" src="images/headphones.svg" width="360" height="240" alt="Беспроводные накладные наушники светлого цвета">
+        <p class="product-category">АУДИО</p>
+        <h3>Наушники Wave</h3>
+        <p class="product-description">Беспроводное подключение, мягкие амбушюры, до 30 часов музыки.</p>
+        <p class="product-price">7 990 ₽</p>
+      </article>
+    </section>
+    <aside class="aside-info">
       <h2>О проекте</h2>
-      <p>TechStore создаётся в шести практических работах. Постепенно здесь появятся каталог, форма заявки и страницы с общей навигацией.</p>
-    </section>
+      <p>TechStore — учебный магазин электроники. Названия моделей, характеристики и цены приведены для демонстрации интерфейса.</p>
+    </aside>
   </main>
-  <footer>
-    <p>&copy; 2026 TechStore. Учебный проект.</p>
+  <footer id="contacts">
+    <div class="site-footer">
+      <a class="site-logo" href="index.html">Tech<span>Store</span><span class="logo-dot">.</span></a>
+      <p>Техника для учёбы и жизни.</p>
+      <p class="footer-note">© 2026 TechStore · Учебный проект по дисциплине «Фронтенд и бэкенд разработка».</p>
+    </div>
   </footer>
 </body>
 </html>
