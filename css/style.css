@@ -15,3 +15,11 @@ header,
 footer {
   background-color: #eff4f8;
 }
+
+section {
+  margin-bottom: 24px;
+}
+
+section h2 {
+  margin-top: 0;
+}
