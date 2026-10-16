@@ -350,7 +350,9 @@ footer .footer-note {
   border-color: var(--color-primary);
 }
 
-.form-field [aria-invalid="true"] {
+.form-field input[aria-invalid="true"],
+.form-field select[aria-invalid="true"],
+.form-field textarea[aria-invalid="true"] {
   border-color: var(--color-danger);
   outline: 1px solid var(--color-danger);
 }
