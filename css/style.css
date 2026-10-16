@@ -141,21 +141,32 @@ textarea:focus-visible {
 }
 
 .site-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--space-sm);
   padding: 0;
-  margin: var(--space-md) 0 0;
+  margin: 0;
   list-style: none;
 }
 
 .site-nav__list li {
-  margin-bottom: var(--space-sm);
+  margin: 0;
 }
 
 .site-nav__list a {
+  display: inline-block;
+  padding: var(--space-sm) 12px;
+  border-radius: var(--radius-sm);
+  color: var(--color-muted);
+  font-size: 14px;
   text-decoration: none;
 }
 
 .site-nav__list a:hover {
-  text-decoration: underline;
+  background-color: var(--color-primary);
+  color: var(--color-white);
 }
 
 /* Основные разделы страницы. */
@@ -208,9 +219,13 @@ textarea:focus-visible {
   margin-bottom: 12px;
 }
 
-/* Карточки пока идут друг под другом. */
+/* Карточки товаров. */
 .product-card {
-  margin-bottom: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  min-width: 0;
+  margin-bottom: 0;
   padding: var(--space-lg);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
@@ -226,12 +241,12 @@ textarea:focus-visible {
   width: 100%;
   max-width: 360px;
   height: auto;
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-sm);
   border-radius: var(--radius-md);
 }
 
 .product-card h3 {
-  margin: var(--space-sm) 0 var(--space-md);
+  margin: 0;
   font-size: 22px;
 }
 
@@ -431,4 +446,92 @@ footer a {
 
 footer a:hover {
   color: var(--color-white);
+}
+
+/* 6. Раскладка Flexbox и Grid */
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.header-brand {
+  flex-shrink: 0;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.product-card p {
+  margin: 0;
+}
+
+.product-card .button {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.catalog-layout {
+  max-width: var(--container-width);
+  margin: 0 auto var(--space-2xl);
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-areas: "filters products";
+  gap: var(--space-lg);
+}
+
+.catalog-filters {
+  grid-area: filters;
+  align-self: start;
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-white);
+}
+
+.catalog-filters h2 {
+  margin-bottom: var(--space-sm);
+  font-size: 22px;
+}
+
+.catalog-products {
+  grid-area: products;
+  min-width: 0;
+}
+
+.filters-form {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.filters-form fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.filters-form legend {
+  font-weight: 700;
+}
+
+.filters-form label {
+  display: block;
+  margin-bottom: var(--space-sm);
+}
+
+.filters-form input[type="number"] {
+  width: 100%;
+  margin-bottom: var(--space-sm);
+  padding: var(--space-sm) 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  font: inherit;
 }

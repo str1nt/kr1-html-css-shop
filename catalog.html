@@ -5,14 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Каталог TechStore: учебные модели ноутбуков, смартфонов и наушников с характеристиками и ценами.">
   <title>Каталог товаров — TechStore</title>
-  <link rel="stylesheet" href="css/style.css?v=5">
+  <link rel="stylesheet" href="css/style.css?v=6">
   <script src="js/main.js?v=3" defer></script>
 </head>
 <body>
   <header>
     <div class="site-header">
-      <a class="site-logo" href="index.html">Tech<span>Store</span><span class="logo-dot">.</span></a>
-      <p class="site-caption">Техника для повседневных задач</p>
+      <div class="header-brand">
+        <a class="site-logo" href="index.html">Tech<span>Store</span><span class="logo-dot">.</span></a>
+        <p class="site-caption">Техника для повседневных задач</p>
+      </div>
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
           <li><a href="index.html">Главная</a></li>
@@ -35,56 +37,80 @@
       <p>Шесть моделей для повседневных задач. Сравните характеристики и откройте учебную форму заявки.</p>
     </section>
     <p class="success-message" id="success-message" role="status" hidden>Форма успешно отправлена! Это учебная проверка: данные не переданы и заказ не оформлен.</p>
-    <section class="section catalog-products">
+    <section class="catalog-layout" aria-label="Каталог и фильтры">
+      <aside class="catalog-filters">
+        <h2>Фильтры</h2>
+        <p class="form-note" id="filters-note">Учебный макет: отбор товаров пока не выполняется.</p>
+        <form class="filters-form" action="#" method="get">
+          <fieldset>
+            <legend>Категория</legend>
+            <label for="category-laptops"><input id="category-laptops" name="category" type="checkbox" value="laptops"> Ноутбуки</label>
+            <label for="category-phones"><input id="category-phones" name="category" type="checkbox" value="phones"> Смартфоны</label>
+            <label for="category-audio"><input id="category-audio" name="category" type="checkbox" value="audio"> Наушники</label>
+          </fieldset>
+          <fieldset>
+            <legend>Цена, ₽</legend>
+            <label for="price-from">От</label>
+            <input id="price-from" name="price-from" type="number" min="0" placeholder="0">
+            <label for="price-to">До</label>
+            <input id="price-to" name="price-to" type="number" min="0" placeholder="100000">
+          </fieldset>
+          <button class="button" type="submit" aria-describedby="filters-note" disabled>Применить</button>
+        </form>
+      </aside>
+    <section class="catalog-products">
       <h2>Вся техника</h2>
-      <article class="product-card" id="note-15">
-        <img class="product-image" src="images/laptop.svg" width="360" height="240" alt="Серебристый ноутбук с фиолетовым экраном">
-        <p class="product-category">НОУТБУКИ</p>
-        <h3>Ноутбук Note 15</h3>
-        <p class="product-description">Экран 15,6″, 16 ГБ памяти, SSD 512 ГБ. Для занятий и учебных проектов.</p>
-        <p class="product-price">64 990 ₽</p>
-        <button class="button product-card__button" type="button" data-product="Ноутбук Note 15">Заказать</button>
-      </article>
-      <article class="product-card" id="core-128">
-        <img class="product-image" src="images/phone.svg" width="360" height="240" alt="Смартфон графитового цвета с большим экраном">
-        <p class="product-category">СМАРТФОНЫ</p>
-        <h3>Смартфон Core 128</h3>
-        <p class="product-description">Экран 6,4″, память 128 ГБ, аккумулятор 5000 мА·ч. Всё нужное под рукой.</p>
-        <p class="product-price">24 990 ₽</p>
-        <button class="button product-card__button" type="button" data-product="Смартфон Core 128">Заказать</button>
-      </article>
-      <article class="product-card" id="wave">
-        <img class="product-image" src="images/headphones.svg" width="360" height="240" alt="Беспроводные накладные наушники светлого цвета">
-        <p class="product-category">АУДИО</p>
-        <h3>Наушники Wave</h3>
-        <p class="product-description">Беспроводное подключение, мягкие амбушюры, до 30 часов музыки.</p>
-        <p class="product-price">7 990 ₽</p>
-        <button class="button product-card__button" type="button" data-product="Наушники Wave">Заказать</button>
-      </article>
-      <article class="product-card" id="air-14">
-        <img class="product-image" src="images/laptop.svg" width="360" height="240" alt="Серебристый ноутбук с фиолетовым экраном">
-        <p class="product-category">НОУТБУКИ</p>
-        <h3>Ноутбук Air 14</h3>
-        <p class="product-description">Экран 14″, 8 ГБ памяти, SSD 256 ГБ. Компактная модель для лекций и конспектов.</p>
-        <p class="product-price">49 990 ₽</p>
-        <button class="button product-card__button" type="button" data-product="Ноутбук Air 14">Заказать</button>
-      </article>
-      <article class="product-card" id="core-256">
-        <img class="product-image" src="images/phone.svg" width="360" height="240" alt="Смартфон графитового цвета с большим экраном">
-        <p class="product-category">СМАРТФОНЫ</p>
-        <h3>Смартфон Core 256</h3>
-        <p class="product-description">Экран 6,4″, память 256 ГБ, аккумулятор 5000 мА·ч. Всё нужное под рукой.</p>
-        <p class="product-price">29 990 ₽</p>
-        <button class="button product-card__button" type="button" data-product="Смартфон Core 256">Заказать</button>
-      </article>
-      <article class="product-card" id="wave-mini">
-        <img class="product-image" src="images/headphones.svg" width="360" height="240" alt="Беспроводные накладные наушники светлого цвета">
-        <p class="product-category">АУДИО</p>
-        <h3>Наушники Wave Mini</h3>
-        <p class="product-description">Беспроводное подключение, мягкие амбушюры, до 20 часов музыки.</p>
-        <p class="product-price">4 990 ₽</p>
-        <button class="button product-card__button" type="button" data-product="Наушники Wave Mini">Заказать</button>
-      </article>
+      <div class="products-grid">
+        <article class="product-card" id="note-15">
+          <img class="product-image" src="images/laptop.svg" width="360" height="240" alt="Серебристый ноутбук с фиолетовым экраном">
+          <p class="product-category">НОУТБУКИ</p>
+          <h3>Ноутбук Note 15</h3>
+          <p class="product-description">Экран 15,6″, 16 ГБ памяти, SSD 512 ГБ. Для занятий и учебных проектов.</p>
+          <p class="product-price">64 990 ₽</p>
+          <button class="button product-card__button" type="button" data-product="Ноутбук Note 15">Заказать</button>
+        </article>
+        <article class="product-card" id="core-128">
+          <img class="product-image" src="images/phone.svg" width="360" height="240" alt="Смартфон графитового цвета с большим экраном">
+          <p class="product-category">СМАРТФОНЫ</p>
+          <h3>Смартфон Core 128</h3>
+          <p class="product-description">Экран 6,4″, память 128 ГБ, аккумулятор 5000 мА·ч. Всё нужное под рукой.</p>
+          <p class="product-price">24 990 ₽</p>
+          <button class="button product-card__button" type="button" data-product="Смартфон Core 128">Заказать</button>
+        </article>
+        <article class="product-card" id="wave">
+          <img class="product-image" src="images/headphones.svg" width="360" height="240" alt="Беспроводные накладные наушники светлого цвета">
+          <p class="product-category">АУДИО</p>
+          <h3>Наушники Wave</h3>
+          <p class="product-description">Беспроводное подключение, мягкие амбушюры, до 30 часов музыки.</p>
+          <p class="product-price">7 990 ₽</p>
+          <button class="button product-card__button" type="button" data-product="Наушники Wave">Заказать</button>
+        </article>
+        <article class="product-card" id="air-14">
+          <img class="product-image" src="images/laptop.svg" width="360" height="240" alt="Серебристый ноутбук с фиолетовым экраном">
+          <p class="product-category">НОУТБУКИ</p>
+          <h3>Ноутбук Air 14</h3>
+          <p class="product-description">Экран 14″, 8 ГБ памяти, SSD 256 ГБ. Компактная модель для лекций и конспектов.</p>
+          <p class="product-price">49 990 ₽</p>
+          <button class="button product-card__button" type="button" data-product="Ноутбук Air 14">Заказать</button>
+        </article>
+        <article class="product-card" id="core-256">
+          <img class="product-image" src="images/phone.svg" width="360" height="240" alt="Смартфон графитового цвета с большим экраном">
+          <p class="product-category">СМАРТФОНЫ</p>
+          <h3>Смартфон Core 256</h3>
+          <p class="product-description">Экран 6,4″, память 256 ГБ, аккумулятор 5000 мА·ч. Всё нужное под рукой.</p>
+          <p class="product-price">29 990 ₽</p>
+          <button class="button product-card__button" type="button" data-product="Смартфон Core 256">Заказать</button>
+        </article>
+        <article class="product-card" id="wave-mini">
+          <img class="product-image" src="images/headphones.svg" width="360" height="240" alt="Беспроводные накладные наушники светлого цвета">
+          <p class="product-category">АУДИО</p>
+          <h3>Наушники Wave Mini</h3>
+          <p class="product-description">Беспроводное подключение, мягкие амбушюры, до 20 часов музыки.</p>
+          <p class="product-price">4 990 ₽</p>
+          <button class="button product-card__button" type="button" data-product="Наушники Wave Mini">Заказать</button>
+        </article>
+      </div>
+    </section>
     </section>
   </main>
   <footer id="contacts">
